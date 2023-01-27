@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .menu {
+            width: 80px;
+            /* border: 1px solid black; */
+            margin: 200px auto;
+            transform: skew(33deg, -15deg)
+        }
+        .menu>li {
+            background: black;
+            color: white;
+            height: 75px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            position: relative;
+            transition: 1s
+        }
+        .menu>li:hover{
+            transform: translate(20px, -20px);
+            background: rgb(155, 155, 3);
+            box-shadow: -40px 40px 2px gray
+        }
+        .menu>li:hover::before{
+            background: rgb(248, 248, 102)
+        }
+        .menu>li:hover::after{
+            background: rgb(144, 144, 0)
+        }
+        .menu>li::before,
+        .menu>li::after {
+            content: '';
+            display: block;
+            position: absolute;
+            transition: 1s
+        }
+        .menu>li::before {
+            width: 100%;
+            height: 10px;
+            background: rgb(195, 195, 195);
+            bottom: -10px;
+            left: 0;
+            transform: skewX(-32deg) translateX(-3px);
+        }
+        .menu>li::after {
+            background: rgb(70, 70, 70);
+            width: 6px;
+            height: 100%;
+            left: -6px;
+            top: 0;
+            transform: skewY(-58deg) translateY(5px);
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><i class="fa fa-telegram" aria-hidden="true"></i></li>
+        <li><i class="fa fa-snowflake-o" aria-hidden="true"></i></li>
+        <li><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+        <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+    </ul>
+</body>
+
+</html>
